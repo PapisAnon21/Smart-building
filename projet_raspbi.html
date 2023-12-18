@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.first_paragraphe
+{
+color: white;
+background: black;
+height: 59px;
+width: 79%;
+font-size: 1.8em;
+position: relative;
+left: 11%;
+/*align-items: center;*/
+}
+.second_paragraphe
+{
+color: white ;
+background: black;
+height: 45px;
+font-size: 1.7em;
+position: relative;
+top: 20%;
+text-align: center;
+}
+.les_reseaux
+{
+display: flex;
+}
+.les_lampes
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+left: 50%;
+}
+.partie_lampes
+{
+display: flex
+}
+.appareil_1
+{
+position: relative;
+left: 40%;
+font-size: 2em;
+}
+.appareil_2
+{
+position: relative;
+left: 50%;
+font-size: 2em;
+}
+.appareil_3
+{
+position: relative;
+left: 60%;
+font-size: 2em;
+}
+.third_paragraphe
+{
+color: white ;
+background: black;
+height: 45px;
+font-size: 1.7em;
+position: relative;
+top: 20%;
+text-align: center;
+}
+.les_lampes_1
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+left: 10%;
+text-align: center;
+}
+.appareil1_1
+{
+position: relative;
+left: 5%;
+font-size: 2em;
+}
+.appareil1_2
+{
+position: relative;
+left: 10%;
+font-size: 2em;
+}
+.appareil1_3
+{
+position: relative;
+left: 15%;
+font-size: 2em;
+}
+
+button
+{
+font-size: 1em;
+}
+</style>
+<meta charset="utf-8">
+<title> Controle des Devices </title>	
+</head>
+<body>
+<div>
+<a href="/device_1/on" id="lien1_1" title="app_1"></a>
+<a href="/device_1/off" id="lien1_2" title="app_1"></a>
+<a href="/device_2/on" id="lien2_1" title="app_2"></a>
+<a href="/device_2/off" id="lien2_2" title="app_2"></a>
+<a href="/device_3/on" id="lien3_1" title="app_3"></a>
+<a href="/device_3/off" id="lien3_2" title="app_3"></a>	
+<a href="/demande_duree?" id="link1_1" title="app_1"></a>
+<a href="/demande_duree?" id="link1_2" title="app_1"></a>
+<a href="/demande_duree?" id="link2_1" title="app_2"></a>
+<a href="/demande_duree?" id="link2_2" title="app_2"></a>
+<a href="/demande_duree?" id="link3_1" title="app_3"></a>
+<a href="/demande_duree?" id="link3_2" title="app_3"></a>	
+</div>	
+<h1> <p class="first_paragraphe" >Bienvenue Dans le Dispositif Smart Building </p></h1>
+<br><br>
+<h2> <p class="second_paragraphe"> Controle des differences appareils </p></h2>
+<div class="les_reseaux">
+<div class="reseaux_electrique">
+<p class="les_lampes">
+Controle Des Appreils
+</p>
+<br>
+<div class="partie_lampes">
+<p class="appareil_1">
+<label><strong> APPAREIL 1 </strong></label>
+<br>
+<button onclick="document.getElementById('lien1_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien1_2').click()">
+OFF
+</button>			
+</p> 
+<p class="appareil_2">
+<label><strong>APPAREIL 2 </strong></label>
+<br>
+<button onclick="document.getElementById('lien2_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien2_2').click()">
+OFF
+</button>			
+</p> 
+<p class="appareil_3">
+<label> <strong>APPAREIL 3 </strong></label>
+<br>
+<button onclick="document.getElementById('lien3_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien3_2').click()">OFF
+</button>			
+</p> 			
+<!--n  commentaire!-->		
+</div>
+<!--n  c'est la que j'ai coupe la partie hydro-- maintenant nous ajoutons la partie dure-->
+</div>
+<div>
+<h2><p class="third_paragraphe"> PROGRAMMER DES DUREES DE FONCTIONNEMENT POUR VOS APP </p></h2>
+<div class="les_reseaux">
+<div class="reseaux_electrique">
+<p class="les_lampes_1">
+Controle Des Appareils
+</p>
+<br>
+<div class="partie_lampes">
+<p class="appareil1_1">
+<label><strong> APPAREIL 1 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_1">
+<br>
+<br>
+<button onclick="ma_fonction_duree_lampe_1_on()">
+ON
+</button>
+<button onclick="ma_fonction_duree_lampe_1_off()">
+OFF
+</button>
+</p> 
+<p class="appareil1_2">
+<label><strong>APPAREIL 2 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_2">
+<br>
+<br>
+<button onclick="ma_fonction_duree_lampe_2_on()">
+ON
+</button>
+<button onclick="ma_fonction_duree_lampe_2_off()">
+OFF
+</button>
+</p> 
+<p class="appareil1_3">
+<label><strong>APPAREIL 3 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_3">
+<br>
+<br>
+<button onclick="ma_foncion_duree_lampe_3_on()">
+ON
+</button>
+<button onclick="ma_foncion_duree_lampe_3_off()">
+OFF
+</button>
+</p> 
+<!--n  commentaire!-->		
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function ma_fonction_duree_lampe_1_on(){
+var temps = document.getElementById('duree_lampe_1').value;
+var link = document.getElementById('link1_1');                 
+link.href = link.href +'pin=14&etat=on&duration='+ temps;
+//document.write(link1.href);
+link.click();
+}
+function ma_fonction_duree_lampe_1_off(){
+var temps = document.getElementById('duree_lampe_1').value;
+var link = document.getElementById('link1_2');
+link.href = link.href +'pin=14&etat=off&duration='+ temps;
+//document.write(link1.href);
+link.click();
+}
+function ma_fonction_duree_lampe_2_on(){
+var temps = document.getElementById('duree_lampe_2').value;
+var link = document.getElementById('link2_1');
+link.href = link.href +'pin=12&etat=on&duration='+ temps;
+//document.write(link1.href);
+link.click();
+}
+function ma_fonction_duree_lampe_2_off(){
+var temps = document.getElementById('duree_lampe_2').value;
+var link = document.getElementById('link2_2');
+link.href = link.href +'pin=12&etat=off&duration='+ temps;
+//document.write(link1.href);
+link.click();
+}
+function ma_foncion_duree_lampe_3_on(){
+var temps = document.getElementById('duree_lampe_3').value;
+var link = document.getElementById('link3_1');
+link.href = link.href +'pin=13&etat=on&duration='+ temps;
+link.click();
+}
+function ma_foncion_duree_lampe_3_off(){
+var temps = document.getElementById('duree_lampe_3').value;
+var link = document.getElementById('link3_2');
+link.href = link.href +'pin=13&etat=off&duration='+ temps;
+link.click();
+}
+</script>
+</body>	
+</html>

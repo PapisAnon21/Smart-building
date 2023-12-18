@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+.first_paragraphe
+{
+color: white;
+background: black;
+height: 59px;
+width: 79%;
+font-size: 1.8em;
+position: relative;
+left: 11%;
+}
+.second_paragraphe
+{
+color: white ;
+background: black;
+height: 45px;
+font-size: 1.7em;
+position: relative;
+top: 20%;
+text-align: center;
+}
+.les_reseaux
+{
+display: flex;
+}
+.reseau_hydro
+{
+position: relative;
+left: 60%;
+top: 30%;
+}
+.les_lampes
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+left: 50%;
+}
+.pompes
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+right: 80%;
+}
+.partie_lampes
+{
+display: flex
+}
+.lampe1
+{
+position: relative;
+left: 40%;
+font-size: 2em;
+}
+.lampe2
+{
+position: relative;
+left: 50%;
+font-size: 2em;
+}
+.lampe3
+{
+position: relative;
+left: 60%;
+font-size: 2em;
+}
+.la_pompe
+{
+position: relative;
+right: 50%;
+top: 5%;
+font-size: 3em;
+}
+.third_paragraphe
+{
+color: white ;
+background: black;
+height: 45px;
+font-size: 1.7em;
+position: relative;
+top: 20%;
+text-align: center;
+}
+button
+{
+font-size: 1em;
+}
+.les_lampes_1
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+left: 10%;
+text-align: center;
+}
+.lampe1_1
+{
+position: relative;
+left: 5%;
+font-size: 2em;
+}
+.lampe1_2
+{
+position: relative;
+left: 10%;
+font-size: 2em;
+}
+.lampe1_3
+{
+position: relative;
+left: 15%;
+font-size: 2em;
+}
+.reseau_hydro1_1
+{
+position: relative;
+left: 45%;
+top: 30%;
+}
+.pompes1_1
+{
+color: white;
+background: black;
+font-size: 2.2em;
+position: relative;
+right: 80%;
+}
+</style>
+<meta charset="utf-8">
+<title> Domotique </title>	
+</head>
+<body>
+<div>
+<a href="/device_1/on" id="lien1_1" title="lampe1"></a>
+<a href="/device_1/off" id="lien1_2" title="lampe1"></a>
+<a href="/device_2/on" id="lien2_1" title="lampe2"></a>
+<a href="/device_2/off" id="lien2_2" title="lampe2"></a>
+<a href="/device_3/on" id="lien3_1" title="lampe3"></a>
+<a href="/device_3/off" id="lien3_2" title="lampe3"></a>
+<a href="/demande_duree?" id="link1_1" title="lampe1"></a>
+<a href="/demande_duree?" id="link1_2" title="lampe1"></a>
+<a href="/demande_duree?" id="link2_1" title="lampe2"></a>
+<a href="/demande_duree?" id="link2_2" title="lampe2"></a>
+<a href="/demande_duree?" id="link3_1" title="lampe3"></a>
+<a href="/demande_duree?" id="link3_2" title="lampe3"></a>
+<a href="/demande_duree?" id="link4_1" title="pompe"></a>
+<a href="/demande_duree?" id="link4_2" title="pompe"></a>
+</div>	
+<h1> <p class="first_paragraphe" >Bienvenue Dans Votre Application Smart Building </p></h1>
+<br><br>
+<h2> <p class="second_paragraphe"> SYSTEME DE CONTROLE ELECTRIQUE ET HYDRAULIQUE </p></h2>
+<div class="les_reseaux">
+<div class="reseaux_electrique">
+<p class="les_lampes">
+Controle Des Lampes
+</p>
+<br>
+<div class="partie_lampes">
+<p class="lampe1">
+<label><strong> LAMPE 1 </strong></label>
+<br>
+<button onclick="document.getElementById('lien1_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien1_2').click()">
+OFF
+</button>
+</p> 
+<p class="lampe2">
+<label><strong>LAMPE 2 </strong></label>
+<br>
+<button onclick="document.getElementById('lien2_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien2_2').click()">
+OFF
+</button>
+</p> 
+<p class="lampe3">
+<label> <strong>LAMPE 3 </strong></label>
+<br>
+<button onclick="document.getElementById('lien3_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien3_2').click()">
+OFF
+</button>
+</p> 
+</div>
+</div>
+<div class="reseau_hydro">
+<p class="pompes">
+Controle De la Pompe
+</p>
+<p class="la_pompe">
+<label><strong>Pompe</strong></label>
+<br>
+<button onclick="document.getElementById('lien4_1').click()">
+ON
+</button>
+<button onclick="document.getElementById('lien4_2').click()">
+OFF
+</button>
+<br>
+</p>
+</div>
+</div>
+<div >
+<h2 ><p class="third_paragraphe"> PROGRAMMER DES DUREES DE FONCTIONNEMENT </p></h2>
+<div class="les_reseaux">
+<div class="reseaux_electrique">
+<p class="les_lampes_1">
+Controle Des Lampes
+</p>
+<br>
+<div class="partie_lampes">
+<p class="lampe1_1">
+<label><strong> LAMPE 1 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_1">
+<br>
+<br>
+<button onclick="ma_fonction_duree_lampe_1_on()">
+ON
+</button>
+<button onclick="ma_fonction_duree_lampe_1_off()">
+OFF
+</button>
+</p> 
+<p class="lampe1_2">
+<label><strong>LAMPE 2 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_2">
+<br>
+<br>
+<button onclick="ma_fonction_duree_lampe_2_on()">
+ON
+</button>
+<button onclick="ma_fonction_duree_lampe_2_off()">
+OFF
+</button>
+</p> 
+<p class="lampe1_3">
+<label><strong>LAMPE 3 </strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text" name="" id="duree_lampe_3">
+<br>
+<br>
+<button onclick="ma_foncion_duree_lampe_3_on()">
+ON
+</button>
+<button onclick="ma_foncion_duree_lampe_3_off()">
+OFF
+</button>
+</p> 
+</div>
+</div>
+<div class="reseau_hydro1_1">
+<p class="pompes1_1">
+Controle De la Pompe
+</p>
+<p class="la_pompe">
+<label><strong>Pompe</strong></label>
+<br>
+<label><em> Saisir la Durée :</em></label>
+<br>
+<input type="text">
+<br>
+<button>
+ON
+</button>
+<button>
+OFF
+</button>
+<br>
+</p>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+function ma_fonction_duree_lampe_1_on(){
+var temps = document.getElementById('duree_lampe_1').value;
+var link = document.getElementById("link1_1");
+link.href = link.href +'pin=14&etat=on&duration='+ temps;
+link.click();
+}
+function ma_fonction_duree_lampe_1_off(){
+var temps = document.getElementById('duree_lampe_1').value;
+var link = document.getElementById("link1_2");
+link.href = link.href +'pin=14&etat=off&duration='+ temps;
+link.click();
+}
+function ma_fonction_duree_lampe_2_on(){
+var temps = document.getElementById('duree_lampe_2').value;
+var link = document.getElementById("link2_1");
+link.href = link.href +'pin=12&etat=on&duration='+ temps;
+link.click();
+}
+function ma_fonction_duree_lampe_2_off(){
+var temps = document.getElementById('duree_lampe_2').value;
+var link = document.getElementById("link2_2");
+link.href = link.href +'pin=12&etat=off&duration='+ temps;
+link.click();
+}
+function ma_foncion_duree_lampe_3_on(){
+var temps = document.getElementById('duree_lampe_3').value;
+var link = document.getElementById("link3_1");
+link.href = link.href +'pin=13&etat=on&duration='+ temps;
+link.click();
+}
+function ma_foncion_duree_lampe_3_off(){
+var temps = document.getElementById('duree_lampe_3').value;
+var link = document.getElementById("link3_2");
+link.href = link.href +'pin=13&etat=off&duration='+ temps;
+link.click();
+}
+</script>
+</body>	
+</html>

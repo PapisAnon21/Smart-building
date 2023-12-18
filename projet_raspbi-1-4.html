@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Domotique</title>
+	<style>
+		
+		
+		.first_paragraph
+		{
+			background-color: rgb(233, 81, 0);
+			height: 2.5cm;
+			color: black;
+			font-family: Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 1.6cm;
+			text-align: center;
+			padding-bottom: 0.2cm;
+			padding-top: 0.2cm;
+			margin: 0cm;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+		}
+		
+		.paragraph
+		{
+			display: inline-block;
+			margin-bottom: 2cm;
+			margin-left: 0cm;
+			margin-right: 0cm;
+			
+		}
+		
+		#main1
+		{
+			background-color: rgb(209, 203, 203);
+			height: 1.5cm;
+			color: black;
+			font-family:Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 0.51cm;
+			text-align: center;
+			padding-top: 0cm;
+			padding-bottom: 0.6cm;
+			border: gray solid 1px;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			margin-bottom: 2cm;
+			
+			
+		}
+		
+		#modify1
+		{
+			margin-right: 0.5cm;
+			margin-left: 0cm;
+		}
+		#modify2
+		{
+			margin-left: 0.5cm;
+			margin-right: 0cm;
+		}
+		
+		#modify1:hover
+		{
+			background-color: white;
+			cursor: pointer;
+			border-radius: 5px;
+			
+		}
+		
+		#modify2:hover
+		{
+			background-color: white;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		
+		.partie_lampes
+		{
+			display: flex;
+			margin-bottom: 0cm;
+			
+		}
+		
+		
+		
+		.second_paragraph
+		{
+			background-color: rgb(243, 154, 106);
+			height: 2cm;
+			color: rgb(255, 255, 255);
+			font-family: Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 0.8cm;
+			text-align: center;
+			padding-bottom: 0cm;
+			padding-top: 0.6cm;
+			margin: 0cm;
+			
+			 
+		}
+		
+		.lampes
+		{
+			background-color: rgb(240, 240, 240);
+			height: 1.5cm;
+			color: black;
+			font-family:Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 0.8cm;
+			text-align: center;
+			padding-top: 0.4cm;
+			padding-bottom: 0cm;
+			border: gray solid 1px;
+			margin-bottom: 0cm;
+			margin-top: 0cm;
+			
+		}
+		
+		.third_paragraph
+		{
+			background-color: rgb(243, 154, 106);
+			height: 2cm;
+			color: rgb(255, 255, 255);
+			font-family: Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 0.8cm;
+			text-align: center;
+			padding-bottom: 0cm;
+			padding-top: 0.6cm;
+			margin: 0cm;
+			align-items: center;
+			 
+		
+		}
+		
+		.pompes
+		{
+			background-color: rgb(240, 240, 240);
+			height: 1.5cm;
+			color: black;
+			font-family:Verdana , sans-serif;
+			font-weight: bolder;
+			font-size: 0.8cm;
+			text-align: center;
+			padding-top: 0.4cm;
+			padding-bottom: 0cm;
+			border: gray solid 1px;
+			margin-bottom: 0cm; 
+			margin-top: 0.5cm;
+			
+		}
+		
+		.lampe1
+		{
+			margin-right: 3cm;
+			margin-left: 14cm;
+		}
+		
+		.lampe2
+		{
+			margin-right: 3cm;
+			
+		}
+		
+		strong
+		{
+			font-size: larger;
+			font-family:Verdana , sans-serif; 
+			display: inline-block;
+			margin-left: 1.7cm;
+			background-color: rgb(175, 175, 175);
+			border-radius: 4px;
+			margin-bottom: 0.3cm;
+		}
+		
+		em
+		{
+			font-size: larger;
+			font-family:Verdana , sans-serif; 
+			font-weight: bolder;
+			background-color: rgb(201, 251, 251);
+			border-radius: 4px;
+		}
+		
+		.lampe1_1
+		{
+			margin-right: 3cm;
+			margin-left: 14cm;
+		}
+		
+		.lampe2_1
+		{
+			margin-right: 3cm;
+			
+		}
+		
+		/*.reseaux_elec
+		{
+			border: 1px gray solid;
+		}
+		
+		.reseau_hydro
+		{
+			border: 1px gray solid;
+		}*/
+		
+		.la_pompe
+		{
+			margin-left: 23cm;
+			margin-bottom: 0.2cm;
+		}
+		
+		button
+		{
+			background-color: rgb(255, 255, 255);
+			font-family: Arial, Helvetica, sans-serif;
+			width: 3cm;
+			height: 1.5cm;
+		    box-shadow: inset;
+			border: gray 5px solid;
+			border-radius: 12px;
+			cursor: pointer;
+			margin: 0cm;
+		}
+		
+		.on:hover
+		{
+			background-color: rgb(26, 177, 3);
+		}
+		
+		.off:hover
+		{
+			background-color: rgba(255, 0, 0, 0.927);
+		}
+		
+		input
+		{
+			border-radius: 5px;
+			margin-bottom: 0.3cm;
+			border: 4px solid gray;
+		}
+		
+		.la_pompe_1
+		{
+			margin-left: 25cm;
+			margin-bottom: 0.2cm;
+		}
+
+		.on:active
+{
+    background-color: rgb(26, 177, 3);
+}
+
+.off:active
+{
+    background-color: rgba(255, 0, 0, 0.927);
+}
+
+.background
+{
+	height: 1cm;
+	width: 100%;
+	background-image: url(BLACK.jpg);
+}
+
+
+	
+
+
+
+		
+		@media (max-width:2000px)
+			{
+				.first_paragraph,.second_paragraph,.third_paragraph, .les_reseaux, .reseau_hydro, .la_pompe, .la_pompe_1, .lampes, .lampe1, .lampe2, .lampe3, .lampe1_1, .lampe2_1, .lampe3_1
+				{
+					font-size: 25px;
+					margin-left: 0cm;
+					margin-right: 0cm;
+					padding-left: 0cm;
+					padding-right: 0cm;
+					width: auto;
+
+				}
+				
+				.la_pompe_1
+				{
+					padding-left: 0cm;
+					padding-right: 0cm;
+				}
+				label
+				{
+					text-align: left;
+				}
+				
+				strong
+				{
+					margin: 0cm;
+					padding: 0cm;
+				}
+
+				.on
+				{
+					margin-left: 0cm;
+					margin-right: 0cm;
+				}
+				.off
+				{
+					margin-left: 0cm;
+					margin-right: 0cm;
+				}
+			}
+
+			@media all and (orientation:portrait)
+			{
+				.first_paragraph,.second_paragraph,.third_paragraph, .les_reseaux, .reseau_hydro, .la_pompe, .la_pompe_1, .lampes, .lampe1, .lampe2, .lampe3, .lampe1_1, .lampe2_1, .lampe3_1
+				{
+					font-size: 15px;
+					margin-left: 0cm;
+					margin-right: 0cm;
+					padding-left: 0cm;
+					padding-right: 0cm;
+					width: auto;
+					
+
+				}
+				
+				.la_pompe_1
+				{
+					padding-left: 0cm;
+					padding-right: 0cm;
+				}
+				label
+				{
+					text-align: left;
+				}	
+
+				strong
+				{
+					margin: 0cm;
+					padding: 0cm;
+				}
+				p.lampes, p.pompes
+				{
+					font-size: 15px
+				}
+
+				.on
+				{
+					margin-left: 0cm;
+					margin-right: 0cm;
+				}
+
+				.off
+				{
+					margin-left: 0cm;
+					margin-right: 0cm;
+				}
+			}
+
+			
+
+			
+		
+		
+	
+		</style>
+</head>
+	<body>
+		<a href="23/off" id="lien1_1" title="lampe1"></a>
+		<a href="23/on" id="lien1_2" title="lampe1"></a>
+		<a href="24/on" id="lien2_1" title="lampe2"></a>
+		<a href="24/off" id="lien2_2" title="lampe2"></a>
+		<a href="25/on" id="lien3_1" title="lampe3"></a>
+		<a href="25/off" id="lien3_2" title="lampe3"></a>
+		<a href="12/on" id="lien4_1" title="pompe"></a>
+		<a href="12/off" id="lien4_2" title="pompe"></a>
+
+		<a href="23/off" id="link1_1" title="lampe1"></a>
+		<a href="23/on" id="link1_2" title="lampe1"></a>
+		<a href="24/on" id="link2_1" title="lampe2"></a>
+		<a href="24/off" id="link2_2" title="lampe2"></a>
+		<a href="25/on" id="link3_1" title="lampe3"></a>
+		<a href="25/off" id="link3_2" title="lampe3"></a>
+		<a href="12/on" id="link4_1" title="pompe"></a>
+		<a href="12/off" id="link4_2" title="pompe"></a>
+
+			
+		
+		<div class="fixe">
+			<h1 class="first_paragraph">BIENVENUE DANS VOTRE APPLICATION SMART BUILDING</h1>
+		</div>	
+		<div class="background">
+
+		</div>
+		
+		<h2 class="second_paragraph">SYSTEME DE CONTROLE ELECTRIQUE ET HYDRAULIQUE</h2>
+		<div class="les_reseaux">
+			<div class="reseaux_elec">
+				<p class="lampes">
+					CONTROLE DES LAMPES
+				</p>
+
+				<div class="partie_lampes">
+					
+					<p class="lampe1">
+
+						<label><strong class="centre"> LAMPE(1) </strong></label>
+						<br>
+						<button onclick="document.getElementById('lien1_1').click()" class="on">
+							ON
+						
+						</button>
+						<button onclick="document.getElementById('lien1_2').click()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+					<p class="lampe2">
+						<label><strong class="centre">LAMPE(2) </strong></label>
+						<br>
+						<button onclick="document.getElementById('lien2_1').click()" class="on">
+							ON
+						</button>
+						<button onclick="document.getElementById('lien2_2').click()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+					<p class="lampe3">
+						<label> <strong class="centre">LAMPE(3) </strong></label>
+						<br>
+						<button onclick="document.getElementById('lien3_1').click()" class="on">
+							ON
+						</button>
+						<button onclick="document.getElementById('lien3_2').click()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+						
+				</div>		<!--n  commentaire!-->		
+			</div>
+				
+			
+			<div class="reseau_hydro">
+				<p class="pompes">
+					CONTROLE DE LA POMPE
+				</p>
+				<p class="la_pompe">
+					<label><strong>POMPE</strong></label>
+					<br>
+					<button onclick="document.getElementById('lien4_1').click()" class="on">
+						ON
+					</button>
+					<button onclick="document.getElementById('lien4_2').click()" class="off">
+						OFF
+					</button>
+					
+					<br>
+				</p>
+				
+			</div>
+				
+				
+
+		</div>
+
+		<div class="background">
+
+		</div>
+
+		<h2 class="third_paragraph"> PROGRAMMER DES DUREES DE FONCTIONNEMENT </h2> 
+		
+		<div class="les_reseaux">
+			<div class="reseaux_elec">
+				<p class="lampes">
+					CONTROLE DES LAMPES
+				</p>
+				
+
+				<div class="partie_lampes">
+					
+					<p class="lampe1_1">
+
+						<label><strong> LAMPE(1) </strong></label>
+						<br>
+						<label><em>DUREE :</em></label>
+						<br>
+						<input type="text" name="" id="duree_lampe_1">
+						<br>
+						<br>
+						<button onclick="ma_fonction_duree_lampe_1_on()" class="on">
+							ON
+						
+						</button>
+						<button onclick="ma_fonction_duree_lampe_1_off()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+					<p class="lampe2_1">
+						<label><strong>LAMPE(2) </strong></label>
+						<br>
+						<label><em>DUREE :</em></label>
+						<br>
+						<input type="text" name="" id="duree_lampe_2">
+						<br>
+						<br>
+						<button onclick="ma_fonction_duree_lampe_2_on()" class="on">
+							ON
+						</button>
+						<button onclick="ma_fonction_duree_lampe_2_off()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+					<p class="lampe3_1">
+						<label><strong>LAMPE(3)</strong></label>
+						<br>
+						<label><em>DUREE :</em></label>
+						<br>
+						<input type="text" name="" id="duree_lampe_3">
+						<br>
+						<br>
+						<button onclick="ma_foncion_duree_lampe_3_on()" class="on">
+							ON
+						</button>
+						<button onclick="ma_foncion_duree_lampe_3_off()" class="off">
+							OFF
+						</button>
+						
+					</p> 
+					
+					<!--n  commentaire!-->		
+				</div>
+			</div>
+			
+		</div>
+		<div class="reseau_hydro1_1">
+			<p class="pompes">
+				CONTROLE DE LA POMPE
+			</p>
+			<p class="la_pompe_1">
+				<label><strong>POMPE</strong></label>
+				<br>
+				<label><em>DUREE :</em></label>
+				<br>
+				<input type="text" name="">
+				<br>
+				<button class="on">
+					ON
+				</button>
+				<button class="off">
+					OFF
+				</button>
+			</p>
+			<div class="background">
+
+			</div>
+			
+		</div>
+			
+			
+
+		</div>
+
+		
+		<script type="text/javascript">
+			/*
+			function lampe_allume(){
+				document.getElementById('img').src = 'lampe_allume.gif';
+				document.getElementById('myP').innerHTML = 'LAMPE ALLUMEE'; 
+				document.getElementById('myP').style.background = 'yellow';
+			}
+			function eteindre_lampe(){
+				document.getElementById('img').src = 'lampe_eteint.gif';
+				document.getElementById('myP').innerHTML = 'LAMPE ETEINTE'; 
+				document.getElementById('myP').style.background = 'white';
+
+			}
+			/*
+			var lampe1 = document.getElementById("lampe1");
+			var lien1 = document.getElementById('lien1');
+
+		lampe1.addEventListen('click', function(e){
+		lien1.click() } , true);
+			//lampe1.onclick = lien1.click()
+			document.getElementById('menu').setAttribute('style','min-height+px;float:left;');
+			<div id="main1">
+				<h2  class="paragraph" id="modify1"> SYSTEME DE CONTROLE ELECTRIQUE ET HYDRAULIQUE</h2>
+				<h2  class="paragraph" id="modify2">PROGRAMMER DES DUREES DE FONCTIONNEMENT</h2>
+			</div>
+			*/
+			function ma_fonction_duree_lampe_1_on(){
+				var temps = document.getElementById('duree_lampe_1').value;
+				var link = document.getElementById("link1_1");
+				link.href = link.href +'/'+ temps;
+				//document.write(link1.href);
+				link.click();
+			}
+			function ma_fonction_duree_lampe_1_off(){
+				var temps = document.getElementById('duree_lampe_1').value;
+				var link = document.getElementById("link1_2");
+				link.href = link.href +'/'+ temps;
+				//document.write(link1.href);
+				link.click();
+			}
+			function ma_fonction_duree_lampe_2_on(){
+				var temps = document.getElementById('duree_lampe_2').value;
+				var link = document.getElementById("link2_1");
+				link.href = link.href +'/'+ temps;
+				//document.write(link1.href);
+				link.click();
+			}
+			function ma_fonction_duree_lampe_2_off(){
+				var temps = document.getElementById('duree_lampe_2').value;
+				var link = document.getElementById("link2_2");
+				link.href = link.href +'/'+ temps;
+				//document.write(link1.href);
+				link.click();
+			}
+			function ma_foncion_duree_lampe_3_on(){
+				var temps = document.getElementById('duree_lampe_3').value;
+				var link = document.getElementById("link3_1");
+				link.href = link.href +'/'+ temps;
+				
+				link.click();
+			}
+			function ma_foncion_duree_lampe_3_off(){
+				var temps = document.getElementById('duree_lampe_3').value;
+				var link = document.getElementById("link3_2");
+				link.href = link.href +'/'+ temps;
+				
+				link.click();
+			}
+			
+
+		</script>
+		
+	</body>
+</html>
+	
